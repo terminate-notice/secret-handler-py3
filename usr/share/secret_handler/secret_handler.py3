@@ -29,7 +29,7 @@ args = parser.parse_args()
 
 if args.id is not None and args.key is not None:
   secrets_client = boto3.client('secretsmanager', region_name=args.region)
-  secret_value = secrets_client.get_secret_value(SecretId=secret)
+  secret_value = secrets_client.get_secret_value(SecretId=args.id)
   decoded_secret = json.loads(secret_value['SecretString'])
   print(decoded_secret[args.key])
 else:
