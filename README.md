@@ -7,7 +7,7 @@
 ## Installing
 
 On Debian or RedHat based systems, get the 
-[latest version of the package](https://github.com/terminate-notice/secret-handler-py2/releases/latest)
+[latest version of the package](https://github.com/terminate-notice/secret-handler-py3/releases/latest)
 and install it. 
 
 ## Using it
