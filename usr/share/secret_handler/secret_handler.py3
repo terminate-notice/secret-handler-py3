@@ -13,17 +13,17 @@ else:
   the_region = requests.get('http://169.254.169.254/latest/meta-data/placement/region')
   region = the_region.content
 
-parser.add_argument('-r', '--region', default=region)
+parser.add_argument('--region', '-r', default=region)
 
 if os.environ.get('SECRET_ID') is not None:
   secret = os.environ.get('SECRET_ID')
 else:
   secret = 'terminate-notice'
 
-parser.add_argument('-i', '--id', default=secret)
+parser.add_argument('--id', '-i', default=secret)
 
 key = os.environ.get('SECRET_KEY')
-parser.add_argument('-k', '--key', default=key)
+parser.add_argument('--key', '-k', default=key)
 
 args = parser.parse_args()
 
