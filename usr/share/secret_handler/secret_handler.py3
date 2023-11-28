@@ -11,7 +11,7 @@ if os.environ.get('AWS_REGION') is not None:
   region = os.environ.get('AWS_REGION')
 else:
   the_region = requests.get('http://169.254.169.254/latest/meta-data/placement/region')
-  region = the_region.content
+  region = the_region.content.decode()
 
 parser.add_argument('--region', '-r', default=region)
 
